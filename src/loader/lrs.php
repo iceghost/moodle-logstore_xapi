@@ -36,10 +36,7 @@ function load(array $config, array $events) {
         $request = curl_init();
         curl_setopt($request, CURLOPT_URL, $url);
         curl_setopt($request, CURLOPT_POSTFIELDS, $postdata);
-        curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($request, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($request, CURLOPT_HTTPHEADER, [
-            'Authorization: Basic '.$auth,
             'X-Experience-API-Version: 1.0.0',
             'Content-Type: application/json',
         ]);

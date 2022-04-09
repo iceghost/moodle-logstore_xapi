@@ -42,7 +42,6 @@ function load(array $config, array $events) {
         $request = new \curl();
         $responsetext = $request->post($url, $postdata, [
             'CURLOPT_HTTPHEADER' => [
-                'Authorization: Basic '.$auth,
                 'X-Experience-API-Version: 1.0.0',
                 'Content-Type: application/json',
             ],
